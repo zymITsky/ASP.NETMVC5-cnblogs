@@ -14,6 +14,7 @@ namespace SlarkInc.Controllers
         {
             Simple s = new Simple();
             s.Name = "Slark";
+            s.Email = "anyangmaxin@163.com";
             return View(s);
         }
 
