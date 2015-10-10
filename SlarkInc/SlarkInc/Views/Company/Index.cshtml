@@ -1,7 +1,39 @@
-﻿
+﻿@model IEnumerable<SlarkInc.Models.Worker>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+<table class="table">
+
+    <tr>
+
+        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+
+        <th>@Html.DisplayNameFor(model => model.Sex)</th>
+
+        <th>@Html.DisplayNameFor(model => model.Rating)</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+        </tr>
+    }
+
+</table>
