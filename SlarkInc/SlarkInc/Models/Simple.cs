@@ -11,7 +11,7 @@ namespace SlarkInc.Models
         [Display(Name = "Name")]
         public string Name { get; set; }
 
-        [Display(Name = "E-Mail")]
+        [Display(Name = "E-Mail"),DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
 }

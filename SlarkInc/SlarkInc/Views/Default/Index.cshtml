@@ -5,5 +5,8 @@
 
 <h2>Index</h2>
 
-@Html.TextBoxFor(m=>m.Name)  |  @Html.TextBoxFor(m => m.Name).ToHtmlString()<br/>
-@Html.LabelFor(m=>m.Email) : @Html.TextBoxFor(m=>m.Email) 
+@Html.TextBoxFor(m => m.Name) | @Html.TextBoxFor(m => m.Name).ToHtmlString()<br/>
+<hr/>
+@Html.LabelFor(m => m.Email) : @Html.TextBoxFor(m => m.Email)
+<hr/>
+@Html.DisplayFor(m=>m.Email) : @Html.EditorFor(m=>m.Email)
