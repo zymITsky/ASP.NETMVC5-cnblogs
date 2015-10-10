@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
 <h2>Index</h2>
@@ -12,3 +13,23 @@
         <p>@slark</p>
     }
 }
+<hr/>
+
+<div>
+    <!--Single Line-->
+    @{ var name = "Slark";}
+    @{ Response.Write("Single Line : Name is" + name + "<br />");}
+
+    <!--Inline-->
+    Inline : Today is:@DateTime.Now.ToString("yyyy-MM-dd") <br/>
+    Inline : Name is @name <br/>
+
+    <!--Multi-Line-->
+    @{
+        var age = 25;
+        Response.Write("Multi-Line : Age is " + age + "<br />");
+    }
+</div>
+<p>
+    服务器在这个文件中逐行搜寻Razor标记中的C#代码，如果读到的是C#单行或多行代码，就执行它。执行后输出的结果就是上面代码中绿色的部分。如果搜寻到了行内代码，就把这一段代码替换成代码对应的值，对应上面代码中黄色部分。这样把这个文件处理一遍之后。
+</p>
