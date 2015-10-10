@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "DefaultAction";
+}
+
+<h2>DefaultAction</h2>
+<hr />
+<p>@Html.ActionLink("LinkText", "ActionName") | @Html.ActionLink("LinkText", "ActionName").ToHtmlString()</p>
+<p>@Html.ActionLink("LinkText", "ActionName", "ControllerName") | @Html.ActionLink("LinkText", "ActionName", "ControllerName").ToHtmlString()</p>
+<p>@Html.ActionLink("LinkText", "ActionName", "ControllerName", new { id = 1 }) | @Html.ActionLink("LinkText", "ActionName", new { id = 1 }).ToHtmlString()</p>
