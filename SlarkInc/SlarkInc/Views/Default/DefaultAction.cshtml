@@ -3,7 +3,13 @@
 }
 
 <h2>DefaultAction</h2>
-<hr />
+<hr/>
+<h1>ActionLink</h1>
 <p>@Html.ActionLink("LinkText", "ActionName") | @Html.ActionLink("LinkText", "ActionName").ToHtmlString()</p>
 <p>@Html.ActionLink("LinkText", "ActionName", "ControllerName") | @Html.ActionLink("LinkText", "ActionName", "ControllerName").ToHtmlString()</p>
 <p>@Html.ActionLink("LinkText", "ActionName", "ControllerName", new { id = 1 }) | @Html.ActionLink("LinkText", "ActionName", new { id = 1 }).ToHtmlString()</p>
+<hr/>
+<h1>RouteLink</h1>
+<p>@Html.RouteLink("LinkText", new {action = "ActionName"}) | @Html.RouteLink("LinkText", new {action = "ActionName"}).ToHtmlString()</p>
+<p>@Html.RouteLink("LinkText", new {action = "ActionName", controller = "ControllerName"}) | @Html.RouteLink("LinkText", new {action = "ActionName", controller = "ControllerName"}).ToHtmlString()</p>
+<p>@Html.RouteLink("LinkText", new {action = "ActionName", id = 1}) | @Html.RouteLink("LinkText", new {action = "ActionName", id = 1}).ToHtmlString()</p>
