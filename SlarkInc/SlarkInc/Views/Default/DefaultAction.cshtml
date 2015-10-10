@@ -47,4 +47,7 @@
         list.Add(item);
     }
 }
-@Html.DropDownList("Id",list) | @Html.DropDownList("Id", list).ToHtmlString() 
+@Html.DropDownList("Id", list) | @Html.DropDownList("Id", list).ToHtmlString()
+<hr/>
+<h1>ListBox</h1>
+@Html.ListBox("NameId",list) | @Html.ListBox("NameId", list).ToHtmlString()
