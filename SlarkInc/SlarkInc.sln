@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlarkInc", "SlarkInc\SlarkInc.csproj", "{CEAE6B67-1436-4844-9FFE-B8B659A9C7F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlarkInc.Tests", "SlarkInc.Tests\SlarkInc.Tests.csproj", "{403B77BE-3456-4C1F-9E89-AC533C9955F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEAE6B67-1436-4844-9FFE-B8B659A9C7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEAE6B67-1436-4844-9FFE-B8B659A9C7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEAE6B67-1436-4844-9FFE-B8B659A9C7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEAE6B67-1436-4844-9FFE-B8B659A9C7F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403B77BE-3456-4C1F-9E89-AC533C9955F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403B77BE-3456-4C1F-9E89-AC533C9955F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403B77BE-3456-4C1F-9E89-AC533C9955F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403B77BE-3456-4C1F-9E89-AC533C9955F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
