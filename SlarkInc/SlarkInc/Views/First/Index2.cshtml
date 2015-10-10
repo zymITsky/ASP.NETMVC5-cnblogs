@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+<style>
+    div div div {
+        border: solid 1px gray;
+        margin-top: 3px;
+        background: #cccccc;
+        text-align: center;
+    }
+</style>
+
+<div id="width"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-3">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">.col-md-12</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">.col-lg-6</div>
+        <div class="col-lg-6">.col-lg-6</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">.col-sm-6</div>
+        <div class="col-sm-6">.col-sm-6</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+</div>
+<script>
+        function setWidth() {
+            $('#width').text("Window width:" + document.body.clientWidth);
+        }
+        setInterval("setWidth()", 100);
+</script>

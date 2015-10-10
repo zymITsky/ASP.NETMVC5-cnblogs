@@ -16,6 +16,11 @@ namespace SlarkInc.Controllers
             return View();
         }
 
+        public ActionResult Index2()
+        {
+            return View();
+        }
+
       /*  // GET: First
         public string Index()
         {
