@@ -51,3 +51,6 @@
 <hr/>
 <h1>ListBox</h1>
 @Html.ListBox("NameId",list) | @Html.ListBox("NameId", list).ToHtmlString()
+<hr/>
+<h1>添加属性</h1>
+@Html.TextBox("NameId","Value",new {@class="classText",@style="width:200px"}) | @Html.TextBox("NameId", "Value", new { @class = "classText", @style = "width:200px" }).ToHtmlString()
