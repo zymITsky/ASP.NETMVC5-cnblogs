@@ -1,7 +1,14 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+<p>Number: @ViewBag.Number</p>
+<p>Message: @ViewBag.Message</p>
+@{
+    foreach (string slark in ViewBag.Slarks)
+    {
+        <p>@slark</p>
+    }
+}
