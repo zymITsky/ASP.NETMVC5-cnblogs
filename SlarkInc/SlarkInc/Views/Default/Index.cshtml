@@ -1,0 +1,9 @@
+﻿@model SlarkInc.Models.Simple
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.TextBoxFor(m=>m.Name)  |  @Html.TextBoxFor(m => m.Name).ToHtmlString()
+ 

@@ -172,6 +172,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Simple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -239,6 +240,7 @@
     <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\First\Index2.cshtml" />
     <Content Include="Views\Default\DefaultAction.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

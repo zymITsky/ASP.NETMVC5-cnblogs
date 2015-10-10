@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SlarkInc.Models;
 
 namespace SlarkInc.Controllers
 {
@@ -11,11 +12,14 @@ namespace SlarkInc.Controllers
         // GET: Default
         public ActionResult Index()
         {
-            return View();
+            Simple s = new Simple();
+            s.Name = "Slark";
+            return View(s);
         }
 
         public ActionResult DefaultAction()
         {
+           
             return View();
         }
     }
