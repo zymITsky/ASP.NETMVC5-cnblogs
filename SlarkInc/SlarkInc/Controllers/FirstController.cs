@@ -8,7 +8,12 @@ namespace SlarkInc.Controllers
 {
     public class FirstController : Controller
     {
-        // GET: First
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+      /*  // GET: First
         public string Index()
         {
             return "<h1>This is index page</h1>";
@@ -22,6 +27,6 @@ namespace SlarkInc.Controllers
         public string Another()
         {
             return "This is first controller another page";
-        }
+        }*/
     }
 }
