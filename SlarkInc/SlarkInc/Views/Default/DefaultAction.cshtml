@@ -2,55 +2,73 @@
     ViewBag.Title = "DefaultAction";
 }
 
-<h2>DefaultAction</h2>
-<hr/>
-<h1>ActionLink</h1>
-<p>@Html.ActionLink("LinkText", "ActionName") | @Html.ActionLink("LinkText", "ActionName").ToHtmlString()</p>
-<p>@Html.ActionLink("LinkText", "ActionName", "ControllerName") | @Html.ActionLink("LinkText", "ActionName", "ControllerName").ToHtmlString()</p>
-<p>@Html.ActionLink("LinkText", "ActionName", "ControllerName", new { id = 1 }) | @Html.ActionLink("LinkText", "ActionName", new { id = 1 }).ToHtmlString()</p>
-<hr/>
-<h1>RouteLink</h1>
-<p>@Html.RouteLink("LinkText", new {action = "ActionName"}) | @Html.RouteLink("LinkText", new {action = "ActionName"}).ToHtmlString()</p>
-<p>@Html.RouteLink("LinkText", new {action = "ActionName", controller = "ControllerName"}) | @Html.RouteLink("LinkText", new {action = "ActionName", controller = "ControllerName"}).ToHtmlString()</p>
-<p>@Html.RouteLink("LinkText", new {action = "ActionName", id = 1}) | @Html.RouteLink("LinkText", new {action = "ActionName", id = 1}).ToHtmlString()</p>
-<hr/>
-<h1>TextBox</h1>
-@Html.TextBox("NameId") | @Html.TextBox("NameId").ToHtmlString()<br/>
-@Html.TextBox("NameId","Value") | @Html.TextBox("NameId", "Value").ToHtmlString()
-<hr/>
-<h1>Hidden</h1>
-@Html.Hidden("NameId") | @Html.Hidden("NameId").ToHtmlString()<br/>
-@Html.Hidden("NameId", "Value") | @Html.Hidden("NameId", "Value").ToHtmlString()
-<hr/>
-<h1>Password</h1>
-@Html.Password("NameId") | @Html.Password("NameId").ToHtmlString()<br/>
-@Html.Password("NameId","Value") | @Html.Password("NameId", "Value").ToHtmlString()
-<hr/>
-<h1>CheckBox</h1>
-<p>@Html.CheckBox("NameId",true) | @Html.CheckBox("NameId",true).ToHtmlString()</p>
-<p>@Html.CheckBox("NameId", false) | @Html.CheckBox("NameId", false).ToHtmlString()</p>
-<hr/>
-<h1>RadioButton</h1>
-<p>@Html.RadioButton("NameId", "Value", true) | @Html.RadioButton("NameId", "Value", true).ToHtmlString()</p>
-<p>@Html.RadioButton("NameId", "Value", false) | @Html.RadioButton("NameId", "Value", false).ToHtmlString()</p>
-<hr/>
-<h1>DropDownList</h1>
-@{
-    SelectListItem item;
-    List<SelectListItem> list=new List<SelectListItem>();
-    for (int i = 1; i < 5; i++)
-    {
-        item=new SelectListItem();
-        item.Text = "Text" + i;
-        item.Value = "Value" + i;
-        item.Selected = (i == 2);
-        list.Add(item);
+<div>
+    <h2>DefaultAction</h2>
+    <hr/>
+    <h1>ActionLink</h1>
+    <p>@Html.ActionLink("LinkText", "ActionName") | @Html.ActionLink("LinkText", "ActionName").ToHtmlString()</p>
+    <p>@Html.ActionLink("LinkText", "ActionName", "ControllerName") | @Html.ActionLink("LinkText", "ActionName", "ControllerName").ToHtmlString()</p>
+    <p>@Html.ActionLink("LinkText", "ActionName", "ControllerName", new {id = 1}) | @Html.ActionLink("LinkText", "ActionName", new {id = 1}).ToHtmlString()</p>
+    <hr/>
+    <h1>RouteLink</h1>
+    <p>@Html.RouteLink("LinkText", new {action = "ActionName"}) | @Html.RouteLink("LinkText", new {action = "ActionName"}).ToHtmlString()</p>
+    <p>@Html.RouteLink("LinkText", new {action = "ActionName", controller = "ControllerName"}) | @Html.RouteLink("LinkText", new {action = "ActionName", controller = "ControllerName"}).ToHtmlString()</p>
+    <p>@Html.RouteLink("LinkText", new {action = "ActionName", id = 1}) | @Html.RouteLink("LinkText", new {action = "ActionName", id = 1}).ToHtmlString()</p>
+    <hr/>
+    <h1>TextBox</h1>
+    @Html.TextBox("NameId") | @Html.TextBox("NameId").ToHtmlString()<br/>
+    @Html.TextBox("NameId", "Value") | @Html.TextBox("NameId", "Value").ToHtmlString()
+    <hr/>
+    <h1>Hidden</h1>
+    @Html.Hidden("NameId") | @Html.Hidden("NameId").ToHtmlString()<br/>
+    @Html.Hidden("NameId", "Value") | @Html.Hidden("NameId", "Value").ToHtmlString()
+    <hr/>
+    <h1>Password</h1>
+    @Html.Password("NameId") | @Html.Password("NameId").ToHtmlString()<br/>
+    @Html.Password("NameId", "Value") | @Html.Password("NameId", "Value").ToHtmlString()
+    <hr/>
+    <h1>CheckBox</h1>
+    <p>@Html.CheckBox("NameId", true) | @Html.CheckBox("NameId", true).ToHtmlString()</p>
+    <p>@Html.CheckBox("NameId", false) | @Html.CheckBox("NameId", false).ToHtmlString()</p>
+    <hr/>
+    <h1>RadioButton</h1>
+    <p>@Html.RadioButton("NameId", "Value", true) | @Html.RadioButton("NameId", "Value", true).ToHtmlString()</p>
+    <p>@Html.RadioButton("NameId", "Value", false) | @Html.RadioButton("NameId", "Value", false).ToHtmlString()</p>
+    <hr/>
+    <h1>DropDownList</h1>
+    @{
+        SelectListItem item;
+        List<SelectListItem> list = new List<SelectListItem>();
+        for (int i = 1; i < 5; i++)
+        {
+            item = new SelectListItem();
+            item.Text = "Text" + i;
+            item.Value = "Value" + i;
+            item.Selected = (i == 2);
+            list.Add(item);
+        }
     }
-}
-@Html.DropDownList("Id", list) | @Html.DropDownList("Id", list).ToHtmlString()
-<hr/>
-<h1>ListBox</h1>
-@Html.ListBox("NameId",list) | @Html.ListBox("NameId", list).ToHtmlString()
-<hr/>
-<h1>添加属性</h1>
-@Html.TextBox("NameId","Value",new {@class="classText",@style="width:200px"}) | @Html.TextBox("NameId", "Value", new { @class = "classText", @style = "width:200px" }).ToHtmlString()
+    @Html.DropDownList("Id", list) | @Html.DropDownList("Id", list).ToHtmlString()
+    <hr/>
+    <h1>ListBox</h1>
+    @Html.ListBox("NameId", list) | @Html.ListBox("NameId", list).ToHtmlString()
+    <hr/>
+    <h1>添加属性</h1>
+    @Html.TextBox("NameId", "Value", new {@class = "classText", @style = "width:200px"}) | @Html.TextBox("NameId", "Value", new {@class = "classText", @style = "width:200px"}).ToHtmlString()
+</div>
+<div>
+    <hr/>
+    <h1>Form表单</h1>
+    @using (Html.BeginForm("actionName", "controllerName", FormMethod.Get))
+    {
+        @:这是表单一
+    }
+
+    @{
+        Html.BeginForm("actionName", "controllerName", FormMethod.Get);
+    }
+    @Html.TextBox("NameId","这是表单二") <input type="submit" value="SubmitButton"/>
+    @{
+        Html.EndForm();
+    }
+</div>
