@@ -32,4 +32,19 @@
 <hr/>
 <h1>RadioButton</h1>
 <p>@Html.RadioButton("NameId", "Value", true) | @Html.RadioButton("NameId", "Value", true).ToHtmlString()</p>
-<p>@Html.RadioButton("NameId","Value",false) | @Html.RadioButton("NameId", "Value", false).ToHtmlString()</p>
+<p>@Html.RadioButton("NameId", "Value", false) | @Html.RadioButton("NameId", "Value", false).ToHtmlString()</p>
+<hr/>
+<h1>DropDownList</h1>
+@{
+    SelectListItem item;
+    List<SelectListItem> list=new List<SelectListItem>();
+    for (int i = 1; i < 5; i++)
+    {
+        item=new SelectListItem();
+        item.Text = "Text" + i;
+        item.Value = "Value" + i;
+        item.Selected = (i == 2);
+        list.Add(item);
+    }
+}
+@Html.DropDownList("Id",list) | @Html.DropDownList("Id", list).ToHtmlString() 
