@@ -14,7 +14,7 @@ namespace SlarkInc.Controllers
             return View();
         }
 
-        [ChildActionOnly]
+ 
         public PartialViewResult ChildAction(DateTime time)
         {
             string greetings = string.Empty;

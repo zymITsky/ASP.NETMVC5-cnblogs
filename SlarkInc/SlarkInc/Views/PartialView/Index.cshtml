@@ -17,4 +17,29 @@
     Html.RenderAction("ChildAction", new { time = DateTime.Now.AddHours(12) });
 }
 <h2>After PartialView</h2>
-    <text>Partial和RenderPartial的关系，可以这样类比：比如我们有一个string叫s，Partial和RenderPartial的关系就相当于s.ToString()和Response.Write(s.ToString())的关系一样。前者是返回内容，后者是输出内容。</text>
+<text>Partial和RenderPartial的关系，可以这样类比：比如我们有一个string叫s，Partial和RenderPartial的关系就相当于s.ToString()和Response.Write(s.ToString())的关系一样。前者是返回内容，后者是输出内容。</text>
+<hr/>
+<div id="divajax"></div>
+<div id="diverror"></div>
+
+<script type="text/javascript">
+    setInterval(LoadAction,1000);
+
+    function LoadAction() {
+        var time = new Date();
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ChildAction","PartialView")',
+            data: { time: time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() },
+            datatype: "json",
+            success:function(data) {
+                $('#divajax').html(data);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                // alert(errorThrown);
+              $("#diverror").html(errorThrown);
+                
+            }
+        });
+    }
+</script>
