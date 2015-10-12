@@ -1,29 +1,31 @@
 ﻿@using SlarkInc.Classes
 @model PagedList.IPagedList<SlarkInc.Models.Worker>
 @using PagedList.Mvc;
-    @{
+@{
     ViewBag.Title = "Index";
-    }
+}
 
-    <h2>Index</h2>
-
-    @using (Html.BeginForm())
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index","Company",FormMethod.Get))
 {
-        <p>
-            Find By Name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", @style = "display: inline" })
-            @Html.Submit("Submit")
+    <p>
+        Find By Name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", @style = "display: inline" })
+        @Html.Submit("Submit")
 
-        </p>
+    </p>
 }
 <table class="table">
 
     <tr>
 
         <th>
-            @Html.ActionLink("First Name", "Index", new {sortOrder = ViewBag.FirstNameSortParm})
+            @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.FirstNameSortParm })
         </th>
 
-        <th>@Html.ActionLink("Last Name", "Index", new {sortOrder = ViewBag.LastNameSortParm})</th>
+        <th>@Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.LastNameSortParm })</th>
 
         <th>Sex</th>
 
@@ -49,6 +51,6 @@
     }
 
 </table>
-<br/>
-Page @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-@Html.PagedListPager(Model,page=>Url.Action("Index",new {page,sortOrder=ViewBag.CurrentSort,currentFilter=ViewBag.CurrentFilter}))
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

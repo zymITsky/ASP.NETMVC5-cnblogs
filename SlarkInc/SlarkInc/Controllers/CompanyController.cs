@@ -52,5 +52,10 @@ namespace SlarkInc.Controllers
             int pageNumber = (page ?? 1);
             return View(workers.ToPagedList(pageNumber,pageSize));
         }
+
+        public ViewResult Create()
+        {
+            return View();
+        }
     }
 }
