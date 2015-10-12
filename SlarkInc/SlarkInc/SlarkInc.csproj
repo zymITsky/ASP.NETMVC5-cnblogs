@@ -175,6 +175,7 @@
     <Compile Include="Controllers\FirstController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Models\DataAnnotationModel.cs" />
     <Compile Include="Models\ModelStateModel.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
     <Compile Include="DAL\CompanyContext.cs" />
@@ -265,6 +266,7 @@
     <Content Include="Views\PartialView\Index.cshtml" />
     <Content Include="Views\PartialView\ChildAction.cshtml" />
     <Content Include="Views\DataValidation\ModelStateAction.cshtml" />
+    <Content Include="Views\DataValidation\DataAnnotationAction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

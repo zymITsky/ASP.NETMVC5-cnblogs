@@ -52,5 +52,26 @@ namespace SlarkInc.Controllers
 
             return View(model);
         }
+
+
+        public ActionResult DataAnnotationAction()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DataAnnotationAction(DataAnnotationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                ViewBag.Name = model.Name;
+                ViewBag.Email = model.Email;
+            }
+            return View(model);
+        }
+
+
+
+
     }
 }
