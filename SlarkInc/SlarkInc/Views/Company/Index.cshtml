@@ -9,9 +9,11 @@
 
     <tr>
 
-        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+        <th>
+            @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.FirstNameSortParm })
+        </th>
 
-        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <th>@Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.LastNameSortParm })</th>
 
         <th>@Html.DisplayNameFor(model => model.Sex)</th>
 
