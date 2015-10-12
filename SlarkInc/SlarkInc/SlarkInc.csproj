@@ -169,11 +169,13 @@
     <Compile Include="Classes\HtmlExtensions.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\DataValidationController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\FirstController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Models\ModelStateModel.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
     <Compile Include="DAL\CompanyContext.cs" />
     <Compile Include="DAL\CompanyInitializer.cs" />
@@ -262,6 +264,7 @@
     <Content Include="Views\Shared\PartialPage.cshtml" />
     <Content Include="Views\PartialView\Index.cshtml" />
     <Content Include="Views\PartialView\ChildAction.cshtml" />
+    <Content Include="Views\DataValidation\ModelStateAction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
