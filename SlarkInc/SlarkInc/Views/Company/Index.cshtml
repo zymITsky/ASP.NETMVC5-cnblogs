@@ -1,10 +1,18 @@
-﻿@model IEnumerable<SlarkInc.Models.Worker>
+﻿@using SlarkInc.Classes
+@model IEnumerable<SlarkInc.Models.Worker>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+@using (Html.BeginForm())
+{
+    <p>
+        Find By Name: @Html.TextBox("SearchString","",new {@class="form-control",@style="display: inline"})
+        @Html.Submit("Submit")
+    </p>
+}
 <table class="table">
 
     <tr>

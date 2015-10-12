@@ -9,15 +9,19 @@ namespace SlarkInc.Controllers
 {
     public class CompanyController : Controller
     {
-        private CompanyContext db=new CompanyContext();
+        private CompanyContext db = new CompanyContext();
 
         // GET: Company
-        public ViewResult Index(string sortOrder)
+        public ViewResult Index(string sortOrder, string searchString)
         {
             ViewBag.FirstNameSortParm = string.IsNullOrWhiteSpace(sortOrder) ? "first_desc" : "";
             ViewBag.LastNameSortParm = sortOrder == "last" ? "last_desc" : "last";
             var workers = from w in db.Workers
-                select w;
+                          select w;
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                workers = workers.Where(w => w.FirstName.Contains(searchString) || w.LastName.Contains(searchString));
+            }
             switch (sortOrder)
             {
                 case "first_desc":
@@ -33,7 +37,7 @@ namespace SlarkInc.Controllers
                     workers = workers.OrderBy(w => w.FirstName);
                     break;
             }
-            
+
             return View(workers.ToList());
         }
     }
