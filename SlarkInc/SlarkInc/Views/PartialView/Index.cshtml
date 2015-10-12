@@ -6,10 +6,10 @@
 <h2>Index</h2>
 <h2>Before PartialView</h2>
 <hr/>
-@Html.Partial("PartialPage")
+@Html.Partial("PartialPage",1)
 <hr/>
 @{
-    Html.RenderPartial("PartialPage");
+    Html.RenderPartial("PartialPage",2);
 }
 <h2>After PartialView</h2>
 <text>Partial和RenderPartial的关系，可以这样类比：比如我们有一个string叫s，Partial和RenderPartial的关系就相当于s.ToString()和Response.Write(s.ToString())的关系一样。前者是返回内容，后者是输出内容。</text>
