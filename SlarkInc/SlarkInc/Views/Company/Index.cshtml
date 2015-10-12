@@ -1,31 +1,33 @@
 ﻿@using SlarkInc.Classes
-@model IEnumerable<SlarkInc.Models.Worker>
-@{
+@model PagedList.IPagedList<SlarkInc.Models.Worker>
+@using PagedList.Mvc;
+    @{
     ViewBag.Title = "Index";
-}
+    }
 
-<h2>Index</h2>
+    <h2>Index</h2>
 
-@using (Html.BeginForm())
+    @using (Html.BeginForm())
 {
-    <p>
-        Find By Name: @Html.TextBox("SearchString","",new {@class="form-control",@style="display: inline"})
-        @Html.Submit("Submit")
-    </p>
+        <p>
+            Find By Name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", @style = "display: inline" })
+            @Html.Submit("Submit")
+
+        </p>
 }
 <table class="table">
 
     <tr>
 
         <th>
-            @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.FirstNameSortParm })
+            @Html.ActionLink("First Name", "Index", new {sortOrder = ViewBag.FirstNameSortParm})
         </th>
 
-        <th>@Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.LastNameSortParm })</th>
+        <th>@Html.ActionLink("Last Name", "Index", new {sortOrder = ViewBag.LastNameSortParm})</th>
 
-        <th>@Html.DisplayNameFor(model => model.Sex)</th>
+        <th>Sex</th>
 
-        <th>@Html.DisplayNameFor(model => model.Rating)</th>
+        <th>Rating</th>
 
     </tr>
     @foreach (var item in Model)
@@ -47,3 +49,6 @@
     }
 
 </table>
+<br/>
+Page @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model,page=>Url.Action("Index",new {page,sortOrder=ViewBag.CurrentSort,currentFilter=ViewBag.CurrentFilter}))

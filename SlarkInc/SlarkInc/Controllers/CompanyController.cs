@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using SlarkInc.DAL;
 
 namespace SlarkInc.Controllers
@@ -12,10 +13,20 @@ namespace SlarkInc.Controllers
         private CompanyContext db = new CompanyContext();
 
         // GET: Company
-        public ViewResult Index(string sortOrder, string searchString)
+        public ViewResult Index(string sortOrder, string searchString,string currentFilter,int? page)
         {
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.FirstNameSortParm = string.IsNullOrWhiteSpace(sortOrder) ? "first_desc" : "";
             ViewBag.LastNameSortParm = sortOrder == "last" ? "last_desc" : "last";
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
             var workers = from w in db.Workers
                           select w;
             if (!string.IsNullOrWhiteSpace(searchString))
@@ -37,8 +48,9 @@ namespace SlarkInc.Controllers
                     workers = workers.OrderBy(w => w.FirstName);
                     break;
             }
-
-            return View(workers.ToList());
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(workers.ToPagedList(pageNumber,pageSize));
         }
     }
 }
