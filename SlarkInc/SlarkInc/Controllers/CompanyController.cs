@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
@@ -75,6 +76,21 @@ namespace SlarkInc.Controllers
             {
                     
                 ModelState.AddModelError("unableToSave","Unable to save changes .Try again,and if the problem persists see your system administrator.");
+            }
+            return View(worker);
+        }
+
+
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Worker worker = db.Workers.Find(id);
+            if (worker == null)
+            {
+                return HttpNotFound();
             }
             return View(worker);
         }
