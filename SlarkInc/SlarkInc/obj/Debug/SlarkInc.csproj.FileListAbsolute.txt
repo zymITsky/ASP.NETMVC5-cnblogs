@@ -75,3 +75,4 @@ E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.d
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.Mvc.dll
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.xml
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.Mvc.xml
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\obj\Debug\SlarkInc.csprojResolveAssemblyReference.cache

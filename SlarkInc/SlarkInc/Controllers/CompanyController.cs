@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using SlarkInc.DAL;
+using SlarkInc.Models;
 
 namespace SlarkInc.Controllers
 {
@@ -56,6 +57,26 @@ namespace SlarkInc.Controllers
         public ViewResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "FirstName,LastName,Sex,Ration")]Worker worker)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Workers.Add(worker);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception)
+            {
+                    
+                ModelState.AddModelError("unableToSave","Unable to save changes .Try again,and if the problem persists see your system administrator.");
+            }
+            return View(worker);
         }
     }
 }
