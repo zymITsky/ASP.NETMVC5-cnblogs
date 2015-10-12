@@ -255,6 +255,7 @@
     <Content Include="Views\Default\DefaultAction.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Company\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
