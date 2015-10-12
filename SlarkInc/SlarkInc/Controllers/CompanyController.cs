@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -91,6 +92,34 @@ namespace SlarkInc.Controllers
             if (worker == null)
             {
                 return HttpNotFound();
+            }
+            return View(worker);
+        }
+
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Worker worker = db.Workers.Find(id);
+            if (worker == null)
+            {
+                return HttpNotFound();
+            }
+            return View(worker);
+        }
+
+
+        [HttpPost,ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Sex,Rating")]Worker worker)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(worker).State=EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
             return View(worker);
         }
