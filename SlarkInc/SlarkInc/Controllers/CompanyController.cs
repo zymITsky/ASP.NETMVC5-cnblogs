@@ -123,5 +123,22 @@ namespace SlarkInc.Controllers
             }
             return View(worker);
         }
+
+
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                Worker workerToDelete=new Worker(){ID=id};
+                db.Entry(workerToDelete).State=EntityState.Deleted;
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("Index", new { id = id, saveChangesError = true });
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
