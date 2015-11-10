@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SlarkInc.Models;
+using System.Data.Entity;
 
 namespace SlarkInc.DAL
 {
-    public class CompanyInitializer : System.Data.Entity.DropCreateDatabaseAlways<CompanyContext>  //每次程序运行时都会删除并重新创建数据库
+    public class CompanyInitializer : CreateDatabaseIfNotExists<CompanyContext> //DropCreateDatabaseAlways<CompanyContext>  //每次程序运行时都会删除并重新创建数据库
     {
         protected override void Seed(CompanyContext context)
         {
