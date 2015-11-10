@@ -71,6 +71,7 @@ E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\zh-Hans\Mic
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\obj\Debug\SlarkInc.dll
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\obj\Debug\SlarkInc.pdb
+<<<<<<< HEAD
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc\bin\SlarkInc.dll.config
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc\bin\SlarkInc.dll
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc\bin\SlarkInc.pdb
@@ -144,3 +145,10 @@ E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\Slark
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc\obj\Debug\SlarkInc.dll
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc\obj\Debug\SlarkInc.pdb
+=======
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.dll
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.Mvc.dll
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.xml
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\bin\PagedList.Mvc.xml
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc\obj\Debug\SlarkInc.csprojResolveAssemblyReference.cache
+>>>>>>> origin/master

@@ -54,6 +54,7 @@ E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc.Tests\bin\Debug
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc.Tests\obj\Debug\SlarkInc.Tests.csprojResolveAssemblyReference.cache
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc.Tests\obj\Debug\SlarkInc.Tests.dll
 E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc.Tests\obj\Debug\SlarkInc.Tests.pdb
+<<<<<<< HEAD
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc.Tests\bin\Debug\SlarkInc.Tests.dll.config
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc.Tests\bin\Debug\SlarkInc.Tests.dll
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc.Tests\bin\Debug\SlarkInc.Tests.pdb
@@ -110,3 +111,7 @@ E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\Slark
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc.Tests\obj\Debug\SlarkInc.Tests.csprojResolveAssemblyReference.cache
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc.Tests\obj\Debug\SlarkInc.Tests.dll
 E:\maxin_SourceCode\cnblogs\ASP.NET MVC 5 入门教程\ASP.NETMVC5-cnblogs\SlarkInc\SlarkInc.Tests\obj\Debug\SlarkInc.Tests.pdb
+=======
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc.Tests\bin\Debug\PagedList.dll
+E:\cnblogs\ASP.NET MVC 5 入门教程\SlarkInc\SlarkInc\SlarkInc.Tests\bin\Debug\PagedList.xml
+>>>>>>> origin/master
